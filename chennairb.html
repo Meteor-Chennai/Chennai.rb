@@ -1,0 +1,33 @@
+<head>
+  <title>chennairb</title>
+</head>
+
+<body>
+  <h1>Welcome to chennairb!</h1>
+  <div class="container">
+    {{> loginButtons}}
+    {{> main}}
+  </div>
+</body>
+<template name="main">
+  <div class="rooms-list">
+    <ul>
+      {{#each rooms}}
+      <li class="room-name">{{name}}</li>	
+      {{/each}}
+    </ul>
+  </div>
+  <div class="chat-room">
+    {{> room}}
+  </div>
+</template>
+
+<template name="room">
+  <h1>{{activeRoom}}</h1>
+  <ul>
+    {{#each messages}}
+    <li>{{username}}: {{message}}</li>	
+    {{/each}}
+  </ul>
+  <input type="text" name="message" id="message" value="" />
+</template>
