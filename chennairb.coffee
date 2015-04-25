@@ -1,4 +1,4 @@
-@Rooms  = new Mongo.Collection "room"
+@Rooms  = new Mongo.Collection "rooms"
 @Messages  = new Mongo.Collection "messages"
 
 if Meteor.isClient
